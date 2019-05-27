@@ -1,0 +1,13 @@
+<!--components/content-detail/detail.wxml-->
+<view class='detail-container'>
+  <view class='text'>
+    <text>063月</text>
+  </view>
+  <view class='sub-detail'>
+    <view class='imgs'>content</view>
+    <view class='location'>
+      <image src='/images/loc.png' class="local"></image>
+      <text>三元里没有荷花的荷花池</text>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,161 @@
+/* pages/remember/remember.wxss */
+.rem-container{
+  position: fixed;
+  width: 100%;
+  height:100%;
+  background-color: rgb(252, 252, 252);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.title{
+  width:100%;
+  padding: 10rpx 0;
+  border-bottom: 1px solid #728880;
+  padding-left: 30px;
+}
+.search{
+  margin: 10px 100rpx;
+  border-radius: 10px;
+  box-sizing: border-box;
+  width:90%;
+  display: flex;
+  height: 36px;
+  font-size: 17px;
+  background-color: rgb(236, 236, 236);
+}
+.img{
+  width:20px;
+  height:20px;
+  margin:auto 0;
+  padding: 0 10px;
+}
+.text{
+   margin-right: 10px;
+   font-size: 18px;
+   font-weight:500;
+}
+
+.content{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  box-sizing:border-box;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;  
+}
+
+.content-box{
+  width: 100%;
+  height: 100%;
+}
+
+.nav-title{
+  display: flex;
+  flex-direction: row;
+  font-size: 0;
+  height: 28px; 
+}
+
+.location{
+  position: relative;
+  margin-left: 2px;
+  font-size: 14px;
+  float: right;
+  line-height: 36px;
+}
+
+
+.image-box{
+  width: 100%;
+  margin: 10px 0;
+}
+
+.message-content{
+  padding-bottom: 14px;
+  align-items: flex-end;
+}
+
+.day{
+  font-size: 22px;
+  font-weight: 600;
+  
+}
+
+.month{
+  font-size: 12px;
+  font-weight: 600;
+  margin-top: 8px;
+  margin-left: 2px;
+  padding-right: 10rpx;
+  line-height: 23px;
+}
+
+
+.imgp{
+  width:106px;
+  height:106px;
+  border-radius:0rpx;
+  background-color: rgba(128, 128, 128,0.1);
+}
+
+
+.imgp-wrpper{
+  display: inline-block;
+  padding-right:10rpx;
+}
+
+.img1{
+  height:12px;
+  width:12px;
+  vertical-align: 0px;
+  margin-right: -3px;
+}
+.input{
+  height: 27px;
+  min-height: 20px;
+  width: 80%;
+  font-size: 14px;
+  margin: auto 0;
+}
+.close{
+  margin: auto 0;
+  width:15px;
+  height:15px;
+  float: left;
+}
+.space{
+  margin: 2px;
+}
+.no_data{
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  padding: 0 10px;
+  display: flex;
+  flex-direction: column;
+}
+.nothing_searched{
+  margin:0 auto;
+  margin-top: 100px;
+  width: 130px;
+  height: 130px;
+}
+.text{
+  margin: 0 auto;
+  color: #000000;
+}
+.text1{
+  margin-left: 3px;
+  font-weight: 500;
+  color:#728880;
+}
+
+.no_text{
+  position: relative;
+  margin: 0 auto;
+  color:rgb(172, 172, 172);
+  font-size:14px; 
+}

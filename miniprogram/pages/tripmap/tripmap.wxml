@@ -1,0 +1,35 @@
+<!--pages/tripmap/tripmap.wxml-->
+<view class='container'>
+  <view class='mapcontainer'>
+    <map class='map' latitude="{{latitude}}" longitude="{{longitude}}" data-id='{{id}}' markers="{{markers}}" scale="{{scale}}"  include-points="{{markers}}" bindmarkertap="markertap" bindcallouttap="callouttap">
+      <cover-image class="mask{{!chioceDistrict?' chioce-list-hide':' chioce-list-show'}}" bind:tap="onShowbar"></cover-image>
+      <cover-view class="trip-container{{!chioceDistrict?' chioce-list-hide':' chioce-list-show'}}">
+        <cover-view class='tex' bindtap='chooseByDate' data-keyword="{{timeList[0]}}">{{timeList[0].value}}
+          <cover-image class='bingo' wx:if="{{id_1}}" src='../../images/bingo.png'></cover-image>
+        </cover-view>
+        <cover-view class='tex' bindtap='chooseByDate' data-keyword="{{timeList[1]}}">{{timeList[1].value}}
+          <cover-image class='bingo' wx:if="{{id_2}}" src='../../images/bingo.png'></cover-image>
+        </cover-view>
+        <cover-view class='tex' bindtap='chooseByDate' data-keyword="{{timeList[2]}}">{{timeList[2].value}}
+          <cover-image class='bingo' wx:if="{{id_3}}" src='../../images/bingo.png'></cover-image>
+        </cover-view>
+        <cover-view class='tex' bindtap='chooseByDate' data-keyword="{{timeList[3]}}">{{timeList[3].value}}
+          <cover-image class='bingo' wx:if="{{id_4}}" src='../../images/bingo.png'></cover-image>
+        </cover-view>
+        <cover-view class='tex' bindtap='chooseByDate' data-keyword="{{timeList[4]}}">{{timeList[4].value}}
+          <cover-image class='bingo' wx:if="{{id_5}}" src='../../images/bingo.png'></cover-image>
+        </cover-view>
+        <cover-view class='tex' bindtap='chooseByDate' data-keyword="{{timeList[5]}}">{{timeList[5].value}}
+          <cover-image class='bingo' wx:if="{{id_6}}" src='../../images/bingo.png'></cover-image>
+        </cover-view>
+      </cover-view>
+      <cover-view class='trips' bind:tap="onShowbar">
+        <cover-view>行迹筛选</cover-view>
+        <cover-image src='{{sortingChioceIcon}}' class='img'></cover-image>
+      </cover-view>
+      <cover-view class='editor' bind:tap="writeText">
+        <cover-image class='imgeditor' src='/images/editor.png'></cover-image>
+      </cover-view>
+    </map>
+  </view>
+</view>

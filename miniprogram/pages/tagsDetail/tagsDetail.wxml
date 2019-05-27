@@ -1,0 +1,31 @@
+<!--pages/tagsDetail/tagsDetail.wxml-->
+<view class='contanier'>
+
+  <view class='input_contanier'>
+    <input class='input' placeholder="添加你的标签(8个字以内）..." value='{{input_tags}}' bindconfirm="inputTags" maxlength='8'></input>
+    <view class='return_back'>
+    <text class='text' bindtap='turnBack'>确定</text>
+  </view>
+  
+  
+</view>
+  <view class='my_tags'>
+    <image class='imgwo' src="/images/wode.png" ></image>
+    <view class='my-tag-box'>我的标签：</view>
+  </view>
+  <view class="hahatag">
+  <view class='tag-box1' wx:for='{{my_tags_words}}' bindtap='delTags' wx:for-item="tags_wordsItem" wx:key="tags_wordsItem" data-keyword="{{tags_wordsItem}}">
+  <image class='tag_logo' src="/images/biaoqian2.png" ></image>
+  {{tags_wordsItem}}</view>
+  </view>
+  <view class='my_tagss'>
+    <image class='imgwo' src="/images/remen.png" ></image>
+    <view class='my-tag-box'>热门标签：</view>
+  </view>
+    <view class='tags'>
+    <view class='tag-box2' wx:for='{{tags_words}}' wx:for-item="tags_wordsItem" wx:key="tags_wordsItem" data-keyword="{{tags_wordsItem}}" catchtap='addTags'>
+    <image class='tag_logo' src="/images/biaoqian2.png" ></image>
+    {{tags_wordsItem}}</view>
+  </view>
+  
+</view>

@@ -1,0 +1,47 @@
+<!--pages/remember/remember.wxml-->
+<!--图片列表模板 start-->
+<template name="items">
+  <view data-id='{{_id}}' bind:tap="viewdetail">
+    <view class='nav-title'>
+      <view class='day'>{{day}}</view>
+      <view class='month'>{{month}}月</view>
+      <view class='location'>
+        <image class='img1' src="/images/loc.png"></image>
+        {{location}}</view>
+    </view>
+    <view class='image-box'>
+      <block wx:for="{{images}}" wx:key="*this">
+        <view class='imgp-wrpper'>
+          <image class='imgp' src="{{item}}" mode="aspectFill" data-idx="{{index}}"></image>
+        </view>
+      </block>
+    </view>
+  </view>
+</template>
+<!--图片列表模板 end-->
+<view class='rem-container'>
+  <view class='title'>
+    <text class='text'>Remember</text>
+    <text class='text'>回忆图册</text>
+  </view>
+  <view class='search'>
+    <image class='img' src='/images/search.png'></image>
+    <input placeholder="关键字搜索" value='{{input}}' bindconfirm="inputConfirm" class='input'></input>
+    <image class='close'  bind:tap="inputDelete" src='../../images/input_close.png'></image>
+  </view>
+  
+  <view class='content'>
+    <view class='space'></view>
+    <scroll-view class='content-box' wx:if='{{!show}}' scroll-y="true">
+      <!--循环输出列表 start-->
+      <view wx:for="{{message}}" class='message-content' wx:key='index'>
+        <template is="items" data="{{...item}}" />
+      </view>
+      <!--循环输出列表 end-->
+    </scroll-view>
+    <view class='no_data' wx:if='{{show}}'>
+      <image class='nothing_searched' src='../../images/no_data.png'></image>
+      <view class='no_text'>没有找到相关记录哟~</view>
+    </view>
+  </view>
+</view>

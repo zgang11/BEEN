@@ -1,0 +1,3 @@
+<!--pages/downPics/downPics.wxml-->
+<text>pages/downPics/downPics.wxml</text>
+<image src='{{url}}'></image>

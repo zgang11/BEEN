@@ -1,0 +1,29 @@
+<!--pages/detail/detail.wxml-->
+<view class='location'>
+      <image src='/images/loc.png' class='locimg'></image>
+      <text class='text'>{{message.location}}</text>
+      <image wx:if='{{!edit}}' src='../../images/dot_s.png' class='dot_s' bindtap='listItemTapEvent'></image>
+    </view>
+<view class='detail-box'>
+  <view class='images-slider'>
+    <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" class='swiper'>
+      <block wx:for="{{message.images}}" wx:key='item.key'>
+        <swiper-item wx:for-item="images_item" wx:key="images_item" data-keyword="{{images_item}}" bindtap="delImg">
+          <image src="{{item}}" class="slide-image" />
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <view class='images-bottom'>
+    <view class='des'>
+      <view class='tab-box'>{{message.temperature}}</view>
+      <view class='tab-box'>{{message.month}}月{{message.day}}日</view>
+      <view class='tab-box' wx:for='{{tags}}' wx:for-item="tags_wordsItem" wx:key="tags_wordsItem" data-keyword="{{tags_wordsItem}}" bindtap='delTags'>{{tags_wordsItem}}</view>
+    </view>
+    <view class='content' wx:if="{{!edit}}">
+      {{context}}
+    </view>
+    <textarea class='content' wx:if="{{edit}}" value='{{context_value}}' bindinput='upDateText'></textarea>
+  </view>
+  <view class='savebutton' catchtap="saveButton" wx:if='{{edit}}'>保存</view>
+</view>

@@ -1,0 +1,46 @@
+<!--pages/me/me.wxml-->
+<view>
+  <view class='title'>
+    <text class='text1'>ME</text>
+    <text class='text2'>我的</text>
+  </view>
+  <view class='user' wx:if="{{isHide}}">
+    <image src='../../images/user.png' class='user-img'></image>
+    <button class='login-in' type='primary' open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="bindGetUserInfo" style='background-color: #87aba0;' >登录</button>
+  </view>
+  <view class='user' wx:if="{{!isHide}}">
+    <image src='{{avatarUrl}}' class='user-img'></image>
+    <view class='nickname'>{{nickName}}</view>
+  </view>
+  <view class='blank'></view>
+  <view class='container'>
+    <view class='txt'>出行记录管理</view>
+
+    <view class='board'>
+      <text class='smalltxt1'>年度出行次数折线图</text>
+      <view class='box1'>
+      
+        <ec-canvas id="mychart-dom-bar" canvas-id="mychart-bar" ec="{{ ec1 }}"></ec-canvas>
+        
+      </view>
+      
+    </view>
+
+    <view class='board'>
+      <text class='smalltxt'>情侣互动热力图</text>
+      <view class='box2'>
+        <ec-canvas id="mychart-dom-bar" canvas-id="mychart-bar" ec="{{ ec2 }}"></ec-canvas>
+      </view>
+       
+    </view>
+    
+    <view class='board'>
+      <text class='smalltxt3'>活动时间分配图</text>
+      <view class='box3'>
+        <ec-canvas id="mychart-dom-bar" canvas-id="mychart-bar" ec="{{ ec3 }}"></ec-canvas>
+      </view>
+      
+    </view>
+    
+  </view>
+</view>

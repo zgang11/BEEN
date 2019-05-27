@@ -1,0 +1,119 @@
+/* pages/me/me.wxss */
+.title{
+  width:100%;
+  padding: 12rpx 0;
+  border-bottom: 1.5px solid #D8D8D8;
+  padding-left: 30px;
+}
+
+.text1{
+  margin-right:10px;
+  font-size: 18px;
+  
+}
+.text2{
+  margin-right: 10px;
+  font-size: 18px;
+  color:#6C8980;
+  
+}
+
+.txt{
+  margin-top: 112rpx;
+  margin-left: 62rpx;
+  color: #648a80;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.smalltxt1{
+  display: inline-block;
+  font-size: 26rpx;
+  color: #6c8980;
+  position: relative;
+  top: 70rpx;
+
+}
+
+.smalltxt{
+  display: inline-block;
+  font-size: 26rpx;
+  color: #6c8980;
+}
+
+.smalltxt3{
+  display: inline-block;
+  font-size: 26rpx;
+  color: #6c8980;
+  margin-bottom: 40rpx;
+}
+.user {
+  border-bottom: 1px solid #ebebeb;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  height: 100px;
+  width: 100%;
+  padding: 0 20px;
+  font-size: 0;
+}
+
+.user-img{
+  margin: auto 0;
+  vertical-align: 10px;
+  border-radius: 50%;
+  width: 120rpx;
+  height: 120rpx;
+  margin-left: 20rpx;
+  
+}
+
+.blank{
+  width: 100%;
+  height: 46rpx;
+  background-color: #ebebeb;
+}
+
+.login-in{
+  margin: auto 0;
+  margin-left: 360rpx;
+  font-size: 30rpx;
+  text-align: center;
+  letter-spacing: 1.4px;
+  font-weight:500;
+  height: 28px;
+  width:65px;
+  line-height: 28px;
+  border-radius: 8rpx;
+  background-color: #6C8980;
+}
+
+.nickname{
+  line-height: 100px;
+  margin-left: 20px;
+  font-size: 28px;
+}
+
+.board{
+  text-align: center;
+  padding: 0;
+  margin-bottom: 35px;
+}
+
+.box1{
+  width:100%;
+  height: 280px;
+}
+
+.box2{
+  width:100%;
+  height: 270px;
+}
+
+.box3{
+  width:100%;
+  height: 320px;
+}
+
+
+

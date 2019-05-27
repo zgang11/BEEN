@@ -1,0 +1,37 @@
+<!--pages/wtext/wtext.wxml-->
+<view class='container'>
+  <view class='nav-bar'>
+    <image bind:tap="backToMap" src='/images/close.png' class='img'></image>
+    <view class='btn' bind:tap="saveForm">保存</view>
+  </view>
+  <view class='content'>
+    <textarea class='text' value='{{context_input}}' maxlength="1000" name="content" placeholder="记录今天新鲜事..." bindinput='addText'>
+    </textarea>
+    <view class='images-contaniers'>
+      <block wx:for="{{images}}" wx:key="*this">
+        <view class='imgp-wrpper'>
+          <view class='remove-box' bindtap="removeImage">
+            <image src='/images/remove.png' style='width:15px;height:15px; vertical-align:10px;'></image>
+          </view>
+          <image class='imgp' bindtap="handleImagePreview" src="{{item}}" mode="aspectFill" data-idx="{{index}}"></image>
+        </view>
+      </block>
+      <view bindtap="chooseImage" type="default" size="mini" class='imgp-wrpper' wx:if="{{images.length>=9?false:true}}">
+        <image src='/images/add-btn.png' class='imgp'></image>
+      </view>
+    </view>
+    <view class='position' bind:tap="chooseLoaction">
+      <image src='/images/loc.png' class='locimg'></image>
+      <text class='text'>{{location}}</text>
+    </view>
+    <view class='tab'>
+      <view class='tab-box'>{{temperature}}</view>
+      <view class='tab-box'>{{month}}月{{day}}日</view>
+      <view class='tab-box' wx:for='{{tags}}'  wx:for-item="tags_wordsItem" wx:key="tags_wordsItem" data-keyword="{{tags_wordsItem}}">{{tags_wordsItem}}</view>
+      <view class='tab-box' bind:tap='addTags'>+添加标签</view>
+    </view>
+  </view>
+</view>
+<view>
+  <text>{{date}}</text>
+</view>
